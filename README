@@ -1,0 +1,41 @@
+mcdl_cgi - cgi interface to mcdl [http://mcdl.sourceforge.net/] 
+databases
+
+Copyright (C) 2002-2004 Russ Burdick, grub@extrapolation.net
+
+this is a perl cgi interface to the databases created by mcdl (either
+the original or my version above - the database structure did not
+change). it is based on code published in one of my favorite Linux
+Journal [http://www.linuxjournal.com/] columns, At The Forge
+[http://www.lerner.co.il/atf/]. Issues 57-59 back in 1999 covered a 3
+part article on "Creating a Web-based BBS". this was really where i
+started playing with perl, cgi, and mysql, and what i got from these
+articles really fuled my interest in perl and cgi programming. the cgi
+pages include links to ATF to give a nod to Reuven.
+
+features of the cgi pages include full library search, statistics on the
+contents of the library, listings by artist, album, and song.
+
+requires the following perl modules:
+
+CGI
+DBI
+DBD::mysql
+HTML::Template
+
+setup is pretty simple:
+
+1) copy the contents of the cgi-bin subdir to an appropriate location 
+(such as your cgi-bin)
+
+2) copy the contents of the html subdir to an appropriate location on 
+you website
+
+3) modify the settings in cgi-bin/cddb/CDDBConstants.pm to match your 
+setup, in particular the db configuration and paths to the template.
+
+4) depending where you put the html and cgi-bin contents in 1) and 2) 
+you may need to modify the index.html and search-form.html files
+
+5) optionally, modify the template file in html/templates to suit your
+site.

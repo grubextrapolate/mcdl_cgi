@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>My CD Library</title>
+  </head>
+  <body>
+
+<H1>Search through the database</H1>
+
+<p>This form allows you to search through the database of recordings in
+my collection. Searches are <strong>case-insensitive</strong> (meaning
+that "ABC" is the same as "abc"), and it will match your search as both
+whole words or word fragments (meaning that searching for "cur" will
+match "cure", "curve", and "cur").  This search looks through the albums
+and information associated with each artist.</p>
+
+<form method="POST" action="/cgi-bin/cddb/search.pl">
+
+<P>Search for: <input type="text" name="term"></P>
+
+<p>
+<input type="radio" name="type" checked value="all">Search all
+<input type="radio" name="type" value="song">Search songs only
+<input type="radio" name="type" value="album">Search albums only
+<input type="radio" name="type" value="artist">Search artists only
+</p>
+
+<input type="submit" value="Search!">
+
+</form>
+
+  </body>
+</html>
